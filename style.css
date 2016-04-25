@@ -1,0 +1,1131 @@
+/*
+ Theme Name:     Arts @ Vertex
+ Theme URI:		 http://www.elegantthemes.com/gallery/
+ Author:         Joachim Happel
+ Author URI:     http://www.joachim-happel.de
+ Template:       Vertex
+ Version:        1.0.0
+*/
+
+/* =Imports styles from the parent theme
+-------------------------------------------------------------- */
+@import url('../Vertex/style.css');
+
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+body {
+    font-family: 'Open Sans',Arial,sans-serif;	
+	color:#222 !important;
+	
+}
+.container {
+	width: auto;
+}
+
+#loader{
+	text-align:center;
+	width:100%;
+	padding:20px;
+	animation: breath 5s infinite;
+}
+@keyframes breath {
+	 0%   {opacity: 0.5;color:black}
+	 25%   {color:green}
+	 50%   {opacity: 1;color:red; }
+	 75%   {color:orange}
+	 100%  {opacity: 0.5;;color:black;}
+}
+#portfolio_items {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1300px;
+    text-align: left;
+}
+@media screen and (max-width : 1400px) {
+	#portfolio_items {
+		max-width: 960px;
+	}
+}
+
+@media screen and (max-width : 1176px) {
+	#portfolio_items {
+		max-width: 640px;
+	}
+}
+@media screen and (max-width : 640px) {
+	#portfolio_items {
+		max-width: 292px;
+	}
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1em;
+}
+
+p {
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+
+.home-section .container {
+    text-align: center;
+}
+
+.section-title h2, #page-name h1 {
+    font-size: 6vw;
+    font-weight: 800;
+    letter-spacing: -.05vw;
+    padding-bottom: 15px;
+	text-align: center;
+	opacity:.5;
+}
+.section-title span {
+    font-weight: 300;
+}
+.section-title .section-subtitle, .main_post_info {
+    font-size: 36px;
+    font-weight: 300;
+}
+.home-section .section-title {
+    padding-bottom: 55px;
+}
+
+#home-section-projects .section-title h2, #home-section-projects .section-title .section-subtitle {
+    color: #636B66;
+}
+
+
+body.home #et-logo {
+    display: inherit;
+}
+
+
+#et-logo {
+    color: #FFFFFF;
+    float: none;
+    font-size: 5em;
+    font-weight: 100;
+    margin-bottom: 5px;
+    margin-top: -20px;
+}
+#et-logo:hover{
+	text-shadow: 0px 0px 5px #FFFFFF;
+	font-weight: 400;
+}
+#top-menu ul.nav > li > a {
+    padding-bottom: 22px;
+}
+
+#top-menu nav a:hover, .description h2 a:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ==========================================================================
+   PROJECTS
+   ========================================================================== */
+
+.single-project .container{
+	width:100%;
+}
+
+
+#main-footer {
+    padding: 5px 0;
+}
+
+
+.single-project #content-area {
+    background-color: #FFFFFF;
+    padding: 0;	
+	
+}
+
+#home-section-projects {
+    background-color: #F5F5F5;
+    padding: 113px 0 120px;
+}
+#home-section-projects .section-title {
+    text-shadow: 1px 1px 1px #FFFFFF;
+}
+#home-section-projects .section-title h2, #home-section-projects .section-title .section-subtitle {
+    color: #636B66;
+}
+#home-section-projects .section-title .section-subtitle {
+	font-size:3vw;
+	opacity:.7;
+}
+#home-section-projects a.more-info {
+    background: linear-gradient(to bottom, #F9F9F9 1%, #F2F2F2 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #E0DDDD;
+    box-shadow: 0 1px 0 #FCFCFC inset, 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: #636B66;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* ==========================================================================
+   Project Image
+   ========================================================================== */
+
+
+.blog-post-image {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.blog-post-image a, .portfolio-image {
+    display: inline-block;
+    position: relative;
+}
+.blog-post-image img, .portfolio-image img {
+    display: block;
+}
+.blog-post-image img, .blog-post-image .overlay, .portfolio-image img, .portfolio-image .overlay, .portfolio_description {
+    border-radius: 100% 100% 100% 100%;
+}
+.opera .blog-post-image img, .opera .blog-post-image .overlay, .opera .portfolio-image img, .opera .portfolio-image .overlay, .opera .portfolio_description {
+    border-radius: 100em 100em 100em 100em;
+}
+.blog-post-image .overlay, .portfolio-image .overlay {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7) inset, 1px 1px 0 rgba(255, 255, 255, 0.2);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.portfolio_description {
+    backface-visibility: hidden;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    transition: all 0.4s ease-in-out 0s;
+    width: 100%;
+}
+.portfolio_info_top, .portfolio_description > a {
+    backface-visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.4s ease-in-out 0.2s;
+}
+.portfolio_info_top {
+    left: 0;
+    padding: 0 7px;
+    text-align: center;
+    top: 70px;
+    width: 252px;
+}
+.portfolio_description > a {
+    bottom: 44px;
+    left: 60px;
+}
+.portfolio-image:hover .portfolio_description, .portfolio-image.et_hover .portfolio_description {
+    opacity: 1;
+    transform: scale(1);
+}
+.portfolio-image:hover .portfolio_info_top, .portfolio-image.et_hover .portfolio_info_top {
+    opacity: 1;
+    transform: translateY(20px);
+}
+.portfolio-image:hover .portfolio_description > a, .portfolio-image.et_hover .portfolio_description > a {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+.post-thumbnail.portfolio-image {
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+
+
+/* ==========================================================================
+   portfolio image
+   ========================================================================== */
+
+
+#portfolio_items{
+	text-align: left;
+}
+#portfolio_items span{
+	display: inline-block;
+}
+
+.portfolio-image {
+    margin: 25px;
+}
+.portfolio-image,
+.portfolio-image img{
+	width:266px;
+	height:266px;
+}
+
+p.portfolio_small_date {
+    color: #4A524D;
+    font-size: 14px;
+    font-weight: 300;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+}
+.portfolio_info_top h3.title {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-top: -8px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
+}
+.portfolio_info_top h3.title a {
+    color: #4A524D;
+    text-decoration: none;
+}
+.portfolio_description > a {
+    background: linear-gradient(to bottom, #F9F9F9 0%, #F6F6F6 100%, #F2F2F2 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #E0DDDD;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px 0 #FCFCFC inset;
+    color: #9A9999;
+    display: inline-block;
+    padding: 10px 16px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+#content-area.fullwidth:before {
+    display: none;
+}
+.et_pt_portfolio_item h2, #content-area h2, #content-area h3, #content-area h4, #content-area h5, #content-area h6 {
+    letter-spacing: -1px;
+}
+
+
+
+.team-member {    
+    width: 100%;
+}
+
+.team-member .title {
+    margin-bottom: 25px;
+    padding-left: 55px;
+   /* text-align: justify;*/
+}
+
+
+
+/* ==========================================================================
+  Einzelner Beitrag single.php
+   ========================================================================== */
+
+ 
+.single-post #top-area, .page #top-area {
+    padding: 593px 0 0 0;
+}
+
+.single-post #content-area, .page #content-area{
+	margin-left:auto;
+	margin-right:auto;
+ }
+.single-post #content-area .container , .page #content-area .container{
+    margin-left:auto;
+	margin-right:auto;
+}
+ .page #content-area .container{
+ 	width:85%;
+ }
+
+.single-post #main-area , .page #main-area {
+	width:auto;
+	margin:0;
+}
+.page #main-area {
+	min-width: 400px;
+	width:70%;
+}
+
+.single-post #main-area .entry, .page #main-area .entry{
+	max-width:1000px;
+	float:left
+}
+.page #main-area .entry{
+	padding:0 10%;
+	width:80%;
+}
+.single-post  #top-area, .single-post  #pre-footer, .page  #top-area, .page #pre-footer{
+    background-size: auto 80%;
+    background-size: cover;
+}
+
+.single-post  .single-thumbnail-title{
+	padding: 0 0 80px 0;
+	position:relative;
+	
+}
+.single-post  #content-area h1{
+    border: 0;
+	background-color:transparent;
+	font-family: "Raleway",Helvetica,Arial;
+    font-size: 4vw;
+    padding: 0;
+    margin: 0 0 0px 0;
+    text-align: left;
+    width: 700px;
+    color: #444;
+    font-size: 2em;
+    font-weight: 100;
+    margin: 0;
+	width:none;
+	position:absolute;
+}
+
+.single-thumbnail{
+	min-width:300px;
+	max-width: 30%;
+	float:left;
+	
+}
+
+.single-thumbnail  img{
+	border:radius:5px;
+	box-shadow: 6px 6px 30px #353526; 
+	width:100%;
+}
+
+.single-content{
+	float: left;
+    margin-left: 3%;
+    margin-top: 4vw;
+	max-width: 65%;
+}
+.single-content strong{
+	font-weight:initial;
+}
+#comments, #reply-title {
+	font-weight:800;
+	font-size:1.2em!important;
+	border-top:1px solid #ddd;
+	padding-top: 40px;
+	color:#888;
+}
+#sidebar .widgettitle{
+	color:#888 !important;
+	font-size:1.2em !important;
+	letter-spacing: 0.5em !important;
+
+}
+#sidebar .widget_search div {
+	width:150%
+}
+
+#sidebar .widget_search label {
+	display:none;
+}
+.single-sidebar{
+	width:260px;
+	float:right;
+	padding-left:40px;
+	
+}
+
+.footer-widget li, .widget li {
+    padding: 4px 0 4px 15px;
+    position: relative;
+}
+
+@media screen and (max-width: 1000px){	
+	.page #content-area .container, 
+	.single-post #content-area .container {
+		width:100%;
+	}
+	.single-post #main-area{
+		width:auto;
+		margin:0;
+	}
+	
+	.page #main-area .entry{
+	
+		width:auto;
+		
+	}
+	
+	.single-post  .single-thumbnail{
+		padding: 0 0 80px 40px;
+		position:relative;
+		
+	}
+	
+	.single-post  #content-area h1{
+		position:relative
+	}
+	.single-content {
+		max-width:98%;
+	}
+	.single-post #main-area .entry, .page #main-area .entry {
+		width:100%;
+	}
+	
+	.page #sidebar, .single-sidebar {
+		float: left;
+		margin-left: 40px;
+		position: relative;
+		width: auto;
+	}
+	
+	
+}
+
+@media screen and (min-width: 1000px){	
+	.single-post #content-area .container {
+			width:1000px;
+	}
+	.single-post #main-area{
+		width:auto;
+		margin:0;
+	}
+	
+}
+
+@media screen and (min-width: 1400px){	
+	.single-post #content-area .container {
+			width:1300px;
+	}
+	 .page #content-area .container{
+			width:1300px;
+	 }
+
+	.page #main-area {
+		width: 969px;
+	}
+}
+
+/* ==========================================================================
+  Titelzeile
+   ========================================================================== */
+.ausstellungstitelzeile{
+	background-color:#DDDDDD;
+	height:30px;
+}
+.ausstellungstitel{
+	color: #dadada;
+    padding: 5px 0 0 0;
+    text-align: center;
+    text-shadow: 1px -1px 0px #000;
+	font-size:130%;
+}
+.ausstellungslinks{
+	margin-left:100px;
+	margin-top: 45px;
+	
+}
+.ausstellungslinks a{
+	color:#fff;
+}
+.ausstellungslinks a:hover{
+	opacity:.6;
+	text-decoration:none;
+}
+
+.artothek-ausstellung-beitragsbild{
+	top:-125px;
+	left: 30px;
+	position:absolute;
+	width: auto;
+}
+.artothek-ausstellung-beitragsbild img{
+	width:80px;
+	border-radius:50%;
+	border: 3px groove black;
+	width:80px;
+	border-radius:50%;
+	border: 3px groove black;
+	float:left;
+}
+.artothek-ausstellung-beitragsbild img:hover{
+	width:85px;
+}
+/* ==========================================================================
+  author-info
+   ========================================================================== */
+
+#author-info{
+
+		padding: 10px 40px;
+		border: 2px solid #B2D5EA;
+		
+}
+
+#info-link , .artothek-ausstellung-beitragsbild {
+	display:none;
+}
+
+div.fold-open {
+    border-bottom: 13px solid transparent;
+    border-left: 26px solid #99CCFF;
+    border-top: 13px solid transparent;
+    margin: 0 0 -9px;
+    height: 0;
+    width: 0;
+}
+
+div.fold-closed{
+    display:none;
+	border-bottom: 13px solid transparent;
+    border-right: 26px solid #ddddee;
+    border-top: 13px solid transparent;
+	margin: 0 0 -9px;
+    height: 0;
+    width: 0;
+}
+
+div.play{
+ width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 100px solid #ffc800;
+  position: relative;
+  float:left;
+  border-radius:5px;
+}
+div.play:hover{
+	box-shadow: 3px 3px 18px #fff;
+}
+div.play:active{
+	box-shadow: 3px 3px 18px #red;
+}
+
+#author-info .play{
+	transform: scale(.5); float:left
+}
+
+#author-info .play:hover{
+	box-shadow: 2px 2px 18px #333;
+}
+.author-info-container{
+
+	position: relative;
+}
+
+.author-info-container-wrapper{
+	overflow: auto;
+    height: 100%;
+    overflow: hidden !important;
+}
+
+.artothek-ausstellung-item-data{
+	z-index:10 !important;
+}
+
+
+#fancybox-wrap{
+	z-index:100000;
+}
+
+
+#fancybox-overlay {
+	z-index:99000;
+}
+
+#horiz_container .author-info-container-wrapper-content ul { 
+	list-style-type:square; 
+	list-style-position: outside; 
+	margin:0 1.5em 1.5em 1.5em;   
+}
+#horiz_container .author-info-container-wrapper-content ol { 
+	margin:0 1.5em 1.5em 1.5em;
+	list-style-type: decimal; 
+	list-style-position: inside; 
+}
+#horiz_container .author-info-container-wrapper-content ul ul,
+#horiz_container .author-info-container-wrapper-content ol ul { 
+	list-style-type: circle; 
+	list-style-position: inside; 
+	margin-left: 15px; 
+}
+#horiz_container .author-info-container-wrapper-content ol ol,
+#horiz_container .author-info-container-wrapper-content ul ol { 
+	list-style-type: lower-latin; 
+	list-style-position: inside; 
+	margin-left: 15px; 
+}
+
+#horiz_container .artothek-ausstellung{
+	background-color: #AAAAAA;
+    border: 1px solid #AAAAAA;    
+
+	-webkit-box-shadow: -3px 2px 0 #CCCCCC;
+	-moz-box-shadow: -3px 2px 0 #CCCCCC;
+	box-shadow: -3px 2px 0 #CCCCCC;
+
+	color: #FFFFFF;
+    display: inline-block;
+    font-size: 1.3em;
+	height: auto;
+    left: 10px;
+    padding: 0px;
+    position: relative;
+	margin: 5% 0;
+}
+
+#horiz_container .artothek-ausstellung a{
+	display: inline-block;
+	color:#fff;
+}
+
+
+.artothek-ausstellung-item-modal{
+	
+	background-color:#fff; padding:20px; 
+	width:500px; 
+	height:500px; 
+	-webkit-box-shadow: 10px 10px 30px #000;
+	-moz-box-shadow: 10px 10px 30px #000;
+	box-shadow: 10px 10px 30px #000; 
+	overflow:auto;
+	text-align:left;
+	padding:0 10 ;
+	max-width:1000px;
+	max-height:900px;
+}
+
+.artothek-ausstellung-item-modal div.infoheader{
+	width:inherit;
+	position:fixed;
+	display:block;
+	background-color:#fff;
+	opacity:.8;
+	color:#000;
+	margin-top:-20px;
+	padding-top:20px;
+	max-width:1000px;
+}
+.artothek-ausstellung-item-modal .infocontent{
+	margin-top:50px;
+}
+.artothek-ausstellung-item-modal p,li{
+	text-align:justify;
+	line-height:1.5;
+	margin-bottom:5px;
+	font-size:1em;
+}
+.artothek-ausstellung-item-modal .close{
+	border:2px solid #ccc;
+	border-radius:50%;
+	width:30px;
+	height:30px;
+	text-align:center;
+	font-size:25px;
+	margin-top: -5px;
+	color:#999;
+	cursor:pointer;
+}
+.artothek-ausstellung-item-modal .attachment-post-thumbnail{
+	float:left;
+	width:40%;
+	margin-right:20px;
+	margin-bottom:10px;
+	
+}
+.artothek-ausstellung-item-content{
+	border: 1px solid #DDDDDD;
+	-webkit-box-shadow: 0px 16px 16px #c7c7c7;
+	-moz-box-shadow: 0px 16px 16px #c7c7c7;
+	box-shadow: 0px 16px 16px #c7c7c7; 
+	display: block;
+    float: left;
+    height: 450px;
+    line-height: 450px;
+    list-style: none outside none;
+	margin-bottom: 10px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle !important;
+    width: 450px;
+
+}
+
+#horiz_container_inner {
+    padding: 8px 5px 5px 3px;
+}
+
+#scrollbar {
+    display: block;
+    font-size: 1px;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    width: 60%;
+}
+#track {
+    background: none repeat scroll 0 0 #676767;
+    border-radius: 15px 15px 15px 15px;
+    height: 17px;
+    left: 0;
+    /*position: absolute;*/
+    top: 0;
+    width: 80%;
+	float: left;
+}
+#dragBar {
+    background-color:#E5E5E5;
+    border-radius: 10px 10px 10px 10px;
+    height: 15px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 20px;
+}
+
+#left_scroll,
+#right_scroll{
+	border-style: solid;
+    border-width: 8px;
+    cursor: pointer;
+    height: 0;
+    /*position: absolute;*/    
+	float: left;
+    top: 1px;
+    width: 0;
+}
+
+#left_scroll {
+    border-color: rgba(0, 0, 0, 0) #808080 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);  	
+	left: -25px;
+	margin-right: 5px;
+}
+#right_scroll {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #808080;    
+	right: -25px;
+	margin-left: 5px;
+}
+#scrollbar, #track, #dragBar, #left, #right {
+    -moz-user-select: none;
+}
+
+
+.projects-vertical-scrollbar-toolbar{
+	position: absolute;
+	top:10px;
+	left:10px;
+}
+/*
+.fullscreen{
+
+    background: url("//cdn.elegantthemes.com/images/gallery_image_overlay.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 200px;
+    left: 5px;
+    position: absolute;
+    top: 30px;
+    width: 288px;
+}*/
+
+/* ==========================================================================
+   FANCYBOX
+   ========================================================================== */
+
+#fancybox-img{
+	max-height: 100%;
+    max-width: 100%;
+}
+
+
+
+.artothek-ausstellung .et_portfolio_more_icon,
+.artothek-ausstellung .et_portfolio_zoom_icon {
+    display: inline-block;
+    height: 37px;
+    left: 0 !important;
+    margin: -15px 0 0 0;
+    position: relative;
+    text-indent: -9999px;
+    top: 0 !important;
+    vertical-align: middle;
+    width: 37px;
+}
+
+.artothek-icon {
+
+}
+
+a.artothek-icon{
+    font-size: 3vh;
+    margin-left: 10px;
+	background: url(document9.svg) no-repeat top left;
+	background-size: contain;
+	padding-left: 5vh;
+}
+
+.iconlicense a{
+	opacity:.6; 
+	height:.8vh;
+	overflow:hidden;
+	font-size:.8vh;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+   
+@media screen and (max-width: 650px) {
+
+	
+
+	body{
+		overflow: visible;
+	}
+
+	#track {
+		width: 70%;
+	}
+	#scrollbar{
+		width: 60%;
+	}
+
+	.author-info-container-wrapper-content,
+	#author-info {
+		padding:0 20px;
+		width:100%;
+	}
+
+	.author-info-container-wrapper,
+	.author-info-container-wrapper:hover
+	{
+		overflow:visible !important;
+		height: auto !important;      
+	}
+	#horiz_container_outer{
+		overflow: visible;
+	}
+	
+	#main-footer{
+		padding: 0;
+	}
+	#horiz_container{
+		margin: 0 ;
+		padding:0;
+	
+	}
+	
+	#horiz_container > li {
+		display: block;
+		margin: 0 ;
+		padding:0;
+	}
+
+	#horiz_container_inner {
+		padding: 0;
+	}
+	
+	
+	.single-project #content-area {
+		padding: 0 0 40px;
+	}
+
+	#horiz_container .artothek-ausstellung{
+		padding:2px;
+		background-color: transparent;
+		box-shadow: none;
+		color:#000;
+		font-weight:bold;
+		border:none;
+	}
+	#horiz_container .artothek-ausstellung a{
+		color:#000;
+		font-weight:bold;
+	}
+
+}
+/*
+@media screen and (max-height: 600px) and (max-width: 1024px){	
+	#projects-vertical-scrollbar{
+			width:800px !important;
+	}
+
+	#horiz_container .artothek-ausstellung{
+		padding:2px;
+		background-color: transparent;
+		box-shadow: none;
+		color:#000;
+		font-weight:bold;
+		border:none;
+	}
+	#horiz_container .artothek-ausstellung a{
+		color:#000 !important;
+		font-weight:bold;
+	}
+}
+
+
+@media screen and (min-width: 800px) {
+	#track {
+		width: 80%;
+	}
+}
+*/
+
+#horiz_container  .artothek-ausstellung-item {
+   text-align:left;
+}
+
+
+@media screen and (orientation: landscape) and (min-width: 1000px){	 
+
+	/* ==========================================================================
+		Austellungsinfobox
+   ========================================================================== */
+	
+	#author-info{
+		
+		overflow:auto;
+		width:450px;
+		padding: 0 40px;
+		float:left;
+		max-height:100%;
+		border: 2px solid #B2D5EA;
+	}
+
+	#info-link{
+		float: left;
+		padding: 10px;
+		max-width: 80px;
+		padding:0;
+	}
+	#info-link div{
+		text-align:center;
+		transform-origin: 0 100%;
+		transform: rotate(90deg);
+		padding:0;
+	}
+	#info-link a {
+		display: block;
+		font-size: 3.5vh;
+		text-align: center;
+		margin-left:-50px;
+		/*box-shadow: 2px 0px 6px #cccccc;*/
+		border-top:1px solid #eee;
+		padding:5px;
+		/*border-radius: 15px 15px 0 0;*/
+		color:#999;
+	}
+	#info-link a:hover {
+		display: block;
+		text-align: center;
+		/*text-shadow: 2px 2px 0px #353526;*/
+		/*background-color:#B2D5EA  !important;*/
+		color:black;
+		text-decoration:none;
+
+	}
+   
+   	/* ==========================================================================
+   projects-vertical-scrollbar
+   ========================================================================== */
+
+	.artothek-ausstellung-item-content{
+		font-size: 3vh;
+		margin-left: 5px;
+		margin-right: 30px;
+	}
+
+	.artothek-ausstellung-item  img{
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	#horiz_container_outer {
+
+		height: 100%;
+		margin: 5px auto;
+		overflow-x: auto;
+		overflow-y: hidden;
+		position: relative;
+	}
+
+	
+	#projects-vertical-scrollbar{
+		display: inline-block;
+		width: 100%;
+		display:none;
+		opacity:0;
+	}
+
+	#horiz_container > li {
+		display: table-cell;
+		list-style: outside none none;
+		margin: 0 20px 0 0;
+		position: relative;
+		vertical-align: middle;
+	}
+
+	#horiz_container {
+		height: 300px; 
+		margin: 0;
+		padding: 0 0 0 25px;
+		display: inline-table;
+		width:auto;
+	}
+
+	.helper {
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+	
+	#horiz_container  .artothek-ausstellung-item {
+	   text-align:left;
+	}
+		
+	#horiz_container li div:hover .project-description,
+	#horiz_container li div:hover h3,
+	#horiz_container li div:hover .meta-info,
+	#horiz_container li div:hover .et-zoom{
+		opacity:1;
+	}
+
+	#horiz_container li .project-description
+	{
+		position: absolute;
+	}
+
+	#info-link, .artothek-ausstellung-beitragsbild {
+		display: block;
+	}
+
+}
+@media screen and (orientation: portrait) {
+	
+	.single-post  #content-area h1{
+		position:relative;
+	}
+	
+	#portfolio_items {
+		width:100%;
+	}
+	
+	#horiz_container > li {
+		
+		margin: 20px 0;
+		
+	}
+	.section-title h2, #page-name h1 {
+		font-size: 10vw;
+	}
+	.author-info-container-wrapper-content,
+	#author-info {
+		padding:0 20px;
+		width:auto !important;
+		height: auto !important;
+		
+	}
+	#horiz_container .artothek-icon{
+		font-size: 5vw;
+		padding-left: 8vw;
+	}
+	
+	
+}
