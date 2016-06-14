@@ -174,7 +174,7 @@ if (isset($wp_query->query_vars['format']) && $wp_query->query_vars['format'] ==
 				<section class="mysection" data-transition="zoom">
 					<div class="title"  style="background-color:#000; opacity:1">
 						<h1>
-							<a href="'.get_permalink().'" target="_blank"><?php the_title();?></a>
+							<a href="<?php echo get_permalink(); ?>"><?php the_title();?></a>
 						</h1>
 					</div>
 					<div class="content fragment fade-in">
